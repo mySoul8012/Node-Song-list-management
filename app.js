@@ -11,7 +11,7 @@ var routeList = require('./routes/list');
 var routeListSongListList = require('./routes/ListSongListList');
 var change = require('./routes/change');
 var update = require('./routes/update');
-
+var AddSongSongList = require('./routes/AddSongSongList');
 var app = express();
 
 // view engine setup
@@ -30,7 +30,9 @@ app.use('/222/list.html', routeList);
 app.use('/222/ListSongListList.html', routeListSongListList);
 app.use('/222/change.html', change);
 app.use('/222/update.html', update);
+app.use('/222/AddSongSongList.html', AddSongSongList);
 app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
